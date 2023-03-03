@@ -1,0 +1,15 @@
+[Unit]
+Description=gin-api-frame.service
+After=network.target
+[Service]
+Type=simple
+Environment=APP_ENV=dev
+WorkingDirectory=/data1/wwwroot/dev/gin-api-frame/gin-api-frame_dev
+ExecStart=/data1/wwwroot/dev/gin-api-frame/gin-api-frame_dev/bin/gin-api-frame_linux run
+RestartSec=1s
+Restart=always
+KillMode=process
+User=www
+Group=www
+[Install]
+WantedBy=multi-user.targetpwd
