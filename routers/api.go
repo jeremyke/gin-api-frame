@@ -55,7 +55,7 @@ func InitApiRouter(test bool) *gin.Engine {
 		healthApi.GET("check", controller.HealthCheck)
 	}
 
-	// 自提点
+	// 业务路由
 	exampleGroup := router.Group("/")
 	{
 		// 获取自提点详情
